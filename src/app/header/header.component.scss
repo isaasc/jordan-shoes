@@ -33,7 +33,7 @@
 }
 
 .background {
-  background-image: url("../../assets/wallpaper.jpeg");
+  background: url("../../assets/wallpaper.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,6 +43,7 @@
   justify-content: center;
   flex-direction: column;
   padding-left: 6.25rem;
+  position: relative;
 
   p {
     font-size: 24px;
@@ -60,5 +61,16 @@
     color: #F9F9F9;
     padding-bottom: 1.525rem;
     max-width: 39.813rem;
+    z-index: 1;
   }
+}
+
+.background::before {
+  content: "";
+  background-color: rgba(17, 16, 16, 0.616);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
